@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.moshejs/recall-watch",
+  "title": "Recall Watch",
+  "description": "One firm's FDA record: warning letters, Form 483 citations and recalls since 2012, with FDA links.",
+  "repository": {
+    "url": "https://github.com/moshejs/recall-watch-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://recall-watch.quentin.software/supplier",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "recall-watch-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "OPENFDA_API_KEY",
+          "description": "Free openFDA API key (open.fda.gov/apis/authentication). Without one, openFDA allows 1,000 requests a day per IP; each lookup makes 3.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "FDA_DASHBOARD_USER",
+          "description": "FDA Data Dashboard API user (the Authorization-User FDA issues). Set it with FDA_DASHBOARD_KEY to turn on Form 483 citations.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "FDA_DASHBOARD_KEY",
+          "description": "FDA Data Dashboard API key (the Authorization-Key FDA issues). Without both dashboard variables, citations come back NOT CONNECTED.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "CONTACT_URL",
+          "description": "URL named in the User-Agent sent to FDA. Default: https://recall-watch.quentin.software",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "SITE_URL",
+          "description": "Base for the links back to the Recall Watch site in each answer. Default: https://recall-watch.quentin.software",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

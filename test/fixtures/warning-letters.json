@@ -1,0 +1,27 @@
+{
+ "draw": 1,
+ "recordsTotal": 7,
+ "recordsFiltered": 7,
+ "data": [
+  [
+   "<time datetime=\"2026-06-16T04:00:00Z\">06/16/2026</time>\n",
+   "<time datetime=\"2026-04-30T04:00:00Z\">04/30/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/zoll-medical-corporation-711320-04302026\">ZOLL Medical Corporation</a>",
+   "Center for Devices and Radiological Health",
+   "CGMP/QSR/Medical Devices/Adulterated",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-02-03T05:00:00Z\">02/03/2026</time>\n",
+   "<time datetime=\"2026-01-23T05:00:00Z\">01/23/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/abbott-diabetes-care-inc-722046-01232026\">Abbott Diabetes Care, Inc. </a>",
+   "Center for Devices and Radiological Health",
+   "CGMP/QSR/Medical Devices/Adulterated",
+   "",
+   "",
+   ""
+  ]
+ ]
+}

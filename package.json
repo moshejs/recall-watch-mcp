@@ -1,0 +1,51 @@
+{
+  "name": "recall-watch-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP server: one firm's FDA record (warning letters, Form 483 citations, recalls since 2012), each with its FDA link.",
+  "mcpName": "io.github.moshejs/recall-watch",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "fda",
+    "openfda",
+    "recalls",
+    "warning-letters",
+    "form-483",
+    "supplier"
+  ],
+  "homepage": "https://recall-watch.quentin.software/supplier",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshejs/recall-watch-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moshejs/recall-watch-mcp/issues"
+  },
+  "license": "MIT",
+  "author": "Moshe Malka",
+  "type": "commonjs",
+  "bin": {
+    "recall-watch-mcp": "mcp/server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "lib/dashboard.js",
+    "lib/http.js",
+    "lib/matcher.js",
+    "lib/openfda.js",
+    "lib/query.js",
+    "lib/supplierHistory.js",
+    "lib/warningLetters.js",
+    "mcp/server.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/mcp.test.js",
+    "prepublishOnly": "node --test test/mcp.test.js"
+  }
+}
