@@ -55,6 +55,8 @@ test('supplier_history: FDA records with their links, and an unconnected source 
   assert.doesNotMatch(text, /Watch this name|#pricing|\/company\?q=/, 'no watchlist or pricing line until watchlists are live');
   assert.match(text, /Full page: https:\/\/recall-watch\.quentin\.software\/supplier\?firm=Abbott%20Diabetes%20Care/);
   const s = r.result.structuredContent;
+  assert.equal('watchUrl' in s, false, 'no watch link until watchlists are live');
+  assert.equal(s.page, 'https://recall-watch.quentin.software/supplier?firm=Abbott%20Diabetes%20Care');
   assert.equal(s.letters.items.length, 1);
   assert.equal(s.citations.status, 'not_configured');
   assert.equal(s.recalls.items[0].recallNumber, 'F-1');

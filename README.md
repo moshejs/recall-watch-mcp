@@ -110,7 +110,7 @@ All variables are optional:
 The tool returns:
 
 - `content`: plain text an assistant can quote, with one line per record and FDA's link on each.
-- `structuredContent`: the same data as JSON. It has `letters`, `citations` and `recalls`, each with a `status` (`checked`, `partial`, `not_checked` or `not_configured`) and an `error` that explains anything other than `checked`. It also has `page`, a link to the full `/supplier` page, and `watchUrl`, where the firm can be watched for new letters and recalls.
+- `structuredContent`: the same data as JSON. It has `letters`, `citations` and `recalls`, each with a `status` (`checked`, `partial`, `not_checked` or `not_configured`) and an `error` that explains anything other than `checked`. It also has `page`, a link to the full `/supplier` page.
 
 The tool is read-only (`readOnlyHint`) and reaches the open web (`openWorldHint`). Bad input, such as a name under 2 characters, comes back as a tool result with `isError: true`, so the model can correct it.
 

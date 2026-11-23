@@ -78,7 +78,6 @@ function structured(h, max) {
     firm: h.query.firm,
     checkedAt: h.checkedAt,
     page: `${SITE}/supplier?firm=${encodeURIComponent(h.query.firm)}`,
-    watchUrl: `${SITE}/company?q=${encodeURIComponent(h.query.firm)}`,
     letters: { ...pick(h.letters, ['status', 'error', 'total', 'mentions', 'stale', 'fetchedAt', 'latest', 'sourceUrl']), items: h.letters.items.slice(0, max).map((it) => pick(it, ['date', 'posted', 'firm', 'subject', 'office', 'hasResponse', 'closedOut', 'url'])) },
     citations: { ...pick(h.citations, ['status', 'error', 'total', 'inspections', 'latest', 'sourceUrl']), themes: h.citations.themes.slice(0, max), establishments: h.citations.establishments.slice(0, 5) },
     recalls: { ...pick(h.recalls, ['status', 'error', 'total', 'classes', 'latest', 'sourceUrl']), items: h.recalls.items.slice(0, max).map((it) => pick(it, ['date', 'firm', 'category', 'classification', 'status', 'product', 'reason', 'recallNumber', 'url'])) },
